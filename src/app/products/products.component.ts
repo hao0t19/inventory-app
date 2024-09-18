@@ -4,11 +4,12 @@ import { Observable } from 'rxjs';
 import { ClarityModule } from '@clr/angular';
 import { CommonModule } from '@angular/common';
 import { DeleteProductModalComponent } from '../delete-product-modal/delete-product-modal.component';
+import { ProductComponent } from '../product/product.component';
 
 @Component({
   selector: 'in-products',
   standalone: true,
-  imports: [ClarityModule , CommonModule , DeleteProductModalComponent],
+  imports: [ClarityModule , CommonModule , DeleteProductModalComponent , ProductComponent],
   providers:[ProductsService],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
