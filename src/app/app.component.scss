@@ -1,5 +1,12 @@
 .branding h1 {
-  color: black;
-  font-size: 20px;
-  margin-top: 10px;
-  }
+  color: #333; // A slightly softer color than pure black for better readability
+  font-size: 2.5rem; // Responsive font size
+  font-weight: 700; // Bold text for emphasis
+  margin: 0; // Remove default margin
+  padding: 10px 0; // Add padding for vertical spacing
+  line-height: 1.2; // Improve line spacing for better readability
+  text-align: center; // Center-align the text if needed
+  text-transform: uppercase; // Optional: Make the text uppercase for a stronger impact
+  letter-spacing: 1px; // Add some spacing between letters for a refined look
+  padding-left: 16px;
+}

@@ -1,0 +1,80 @@
+/* delete-product-modal.component.scss */
+
+/* Styles for the entire modal */
+clr-modal {
+  max-width: 500px; // Limit the width of the modal
+  border-radius: 8px; // Rounded corners for a modern look
+}
+
+/* Styles for the modal title */
+.modal-title {
+  font-size: 1.5rem; // Larger font size for emphasis
+  color: #333; // Darker color for better readability
+  font-weight: bold;
+}
+
+/* Styles for the modal body */
+.modal-body {
+  padding: 20px; // Add padding inside the modal body
+  font-size: 1rem; // Increase font size for readability
+  color: #555; // Slightly lighter color for the text
+}
+
+/* Styles for alert in the modal body */
+clr-alert {
+  margin-bottom: 20px; // Space between alert and other content
+  padding: 10px; // Padding inside the alert
+}
+
+/* Styles for alert text */
+.alert-text {
+  font-size: 1rem; // Font size for alert text
+  color: #d9534f; // Red color for the alert
+}
+
+/* Styles for the modal footer */
+.modal-footer {
+  padding: 10px 20px; // Padding for the footer
+  text-align: right; // Align buttons to the right
+  background-color: #f7f7f7; // Light background color for the footer
+  border-top: 1px solid #ddd; // Border at the top of the footer
+}
+
+/* Styles for the action buttons */
+.btn {
+  font-size: 1rem; // Font size for buttons
+  padding: 10px 20px; // Padding inside buttons
+  border-radius: 4px; // Rounded corners for buttons
+}
+
+.btn-outline {
+  border-color: #007bff; // Outline color
+  color: #007bff; // Text color
+}
+
+.btn-outline:hover {
+  background-color: #e7f0ff; // Background color on hover
+}
+
+.btn-danger {
+  background-color: #d9534f; // Red background for danger button
+  color: white; // White text for better contrast
+}
+
+.btn-danger:hover {
+  background-color: #c9302c; // Darker red on hover
+}
+
+::ng-deep .modal-body-wrapper{
+  background-color: white;
+}
+
+::ng-deep .modal-title{
+  background-color: #bacae7;
+  padding: 20px;
+}
+
+::ng-deep .modal-header--accessible{
+  background-color: #bacae7;
+}
+

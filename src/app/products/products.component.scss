@@ -95,3 +95,13 @@ clr-dg-page-size {
 }
 
 
+.action-item-delete{
+  background-color: #e24151;
+}
+
+::ng-deep .datagrid-action-overflow{
+  background-color: #60c277;
+}
+
+
+
