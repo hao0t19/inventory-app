@@ -7,11 +7,18 @@ body {
 
 /* Header styling */
 h1 {
-  text-align: center;
-  color: #0f62fe; /* IBM blue */
-  font-weight: bold;
-  margin-bottom: 30px;
+  color: #197ee2; // A dark shade of blue-gray for a sophisticated look
+  font-size: 1.5rem; // Responsive font size that scales well
+  font-weight: 700; // Bold text to make the heading prominent
+  margin: 0 0 1rem 0; // Remove top margin and add bottom margin for spacing
+  padding: 0; // Remove default padding
+  line-height: 1.2; // Improve readability with appropriate line height
+  text-align: left; // Align text to the left for a more traditional look
+  text-transform: capitalize; // Capitalize the first letter of each word
+  border-bottom: 2px solid #3498db; // Add a bottom border with color for emphasis
+  padding-bottom: 0.5rem; // Add padding to prevent overlap with the border
 }
+
 
 /* Styling the Clarity datagrid */
 clr-datagrid {
