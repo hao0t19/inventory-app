@@ -99,4 +99,13 @@ export class ProductsService {
     }];
 
     products$ = new BehaviorSubject<IProduct[]>(this.products);
+
+    removeProduct(product: IProduct) {
+      const index = this.products.indexOf(product);
+      this.products = [
+      ...this.products.slice(0, index),
+      ...this.products.slice(index + 1),
+      ];
+             this.products$.next(this.products);
+      }
   }
