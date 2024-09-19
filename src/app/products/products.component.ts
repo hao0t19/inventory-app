@@ -64,6 +64,7 @@ export class ProductsComponent implements OnInit {
         this.productsService.addProduct(event.product);
       }
     }
+    console.log('handlefinish in products')
     this.productOpen = false;
   }
 

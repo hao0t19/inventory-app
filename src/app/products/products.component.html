@@ -10,16 +10,25 @@
   <clr-dg-row *clrDgItems="let product of (products$ | async) ?? []; trackBy: trackById" [clrDgItem]="product">
     <clr-dg-action-overflow>
       <button class="action-item" (click)="onEdit(product)">Edit</button>
-      <button class="action-item-delete" (click)="onDelete(product)" >Delete</button>
+      <button class="action-item-delete" (click)="onDelete(product)">Delete</button>
     </clr-dg-action-overflow>
     <clr-dg-cell>{{ product.name }}</clr-dg-cell>
     <clr-dg-cell>{{ product.expirationDate }}</clr-dg-cell>
     <clr-dg-cell>
-      <span class="label" [ngClass]="{ 'label-success': product.active, 'label-danger': !product.active }">
-        {{ product.active ? 'Active' : 'Inactive' }}
-      </span>
+      <span *ngIf="product.active"
+      class="inline-flex items-center rounded-full bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
+  Active
+</span>
+
+<span *ngIf="!product.active"
+      class="inline-flex items-center rounded-full bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/20">
+  Inactive
+</span>
     </clr-dg-cell>
   </clr-dg-row>
+  
+  
+  
 
   <clr-dg-footer>
     <clr-dg-pagination #pagination [clrDgPageSize]="10">

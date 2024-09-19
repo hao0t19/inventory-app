@@ -31,9 +31,6 @@ export class ProductComponent {
 
   deviceType = 'tablet';
 
-
-  
-
   deviceTypes = [
     { name: 'Tablet', icon: 'fas fa-tablet-alt' },
     { name: 'Laptop', icon: 'fas fa-laptop' },
@@ -41,8 +38,7 @@ export class ProductComponent {
     { name: 'Monitor', icon: 'fas fa-desktop' }
   ];
   
-
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder) { //inject formbuilder
     this.productForm = this.fb.group({
       basic: this.fb.group({
         name: ['' , Validators.required],
@@ -127,8 +123,9 @@ export class ProductComponent {
   }
 
   ngOnInit() {
-    if (this.product) {
-        this.productForm.setValue({
+    if (this.product) { //check condition 
+      console.log('in if ')
+        this.productForm.setValue({ //set the values of the form controls
             basic: {
                 ...pick(this.product, ['name', 'description', 'active']),
                 features: this.product.features || [''],
@@ -139,9 +136,11 @@ export class ProductComponent {
         });
         this.deviceType = this.product.type;
     }
+    console.log('product ngoninit')
  }
 
  ngOnChanges() {
+  console.log('ngonchanges in product')
   this.ngOnInit();
   }
   

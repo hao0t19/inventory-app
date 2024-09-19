@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 /* General page styles */
 body {
   font-family: Arial, sans-serif;
@@ -51,21 +55,21 @@ clr-dg-row {
 }
 
 /* Styling for Active/Inactive labels */
-.label {
-  font-size: 12px;
-  padding: 3px 8px;
-  border-radius: 12px;
-}
+// .label {
+//   font-size: 12px;
+//   padding: 3px 8px;
+//   border-radius: 12px;
+// }
 
-.label-success {
-  background-color: #28a745;
-  color: white;
-}
+// .label-success {
+//   background-color: #28a745;
+//   color: white;
+// }
 
-.label-danger {
-  background-color: #dc3545;
-  color: white;
-}
+// .label-danger {
+//   background-color: #dc3545;
+//   color: white;
+// }
 
 /* Pagination styling */
 clr-dg-pagination {
