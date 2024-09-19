@@ -137,4 +137,6 @@ clr-dg-page-size {
   }
 }
 
-
+::ng-deep .clr-wizard .clr-wizard-footer-buttons-wrapper{
+  background-color: white;
+}
