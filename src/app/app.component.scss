@@ -1,12 +1,19 @@
-.branding h1 {
-  color: #333; // A slightly softer color than pure black for better readability
-  font-size: 2rem; // Responsive font size
-  font-weight: 700; // Bold text for emphasis
-  margin: 0; // Remove default margin
-  padding: 10px 0; // Add padding for vertical spacing
-  line-height: 1.2; // Improve line spacing for better readability
-  text-align: center; // Center-align the text if needed
-  text-transform: uppercase; // Optional: Make the text uppercase for a stronger impact
-  letter-spacing: 1px; // Add some spacing between letters for a refined look
-  padding-left: 16px;
+h1 {
+  font-family: 'Roboto', sans-serif; /* A modern sans-serif font */
+  font-size: 2.5rem; /* Larger font size for emphasis */
+  font-weight: 700; /* Bold weight for importance */
+  color: #333; /* Dark gray for readability */
+  text-transform: uppercase; /* Uppercase for a professional touch */
+  letter-spacing: 1.5px; /* Slight letter spacing for clarity */
+  margin: 0 0 20px 0; /* Margin to separate from other elements */
+  padding: 10px 0; /* Padding to give it some space */
+  border-bottom: 2px solid #007BFF; /* A subtle border to add depth */
+  text-align: center; /* Center align for a balanced look */
+  background: linear-gradient(to right, #000000, #00BFFF); /* Gradient background */
+  -webkit-background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  padding-left: 10px;
 }
+
