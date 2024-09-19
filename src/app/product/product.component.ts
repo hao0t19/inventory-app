@@ -5,6 +5,7 @@ import { IProduct } from '../product.service';
 import { ClarityModule } from '@clr/angular';
 import { CommonModule } from '@angular/common';
 import { ClrWizard } from '@clr/angular';
+import { pick } from 'lodash';
 
 function minDateValidation(date: Date): ValidatorFn {
   return (control: AbstractControl): {[key: string]: any} | null => {
@@ -30,6 +31,9 @@ export class ProductComponent {
   @ViewChild('productWizard' , {static:false}) productWizard!:ClrWizard;
 
   deviceType = 'tablet';
+
+
+  
 
   deviceTypes = [
     { name: 'Tablet', icon: 'tablet' },
@@ -120,6 +124,25 @@ export class ProductComponent {
 
     });
     this.close();
+  }
+
+  ngOnInit() {
+    if (this.product) {
+        this.productForm.setValue({
+            basic: {
+                ...pick(this.product, ['name', 'description', 'active']),
+                features: this.product.features || [''],
+            },
+            expiration: {
+                ...pick(this.product, ['expirationDate']),
+            }
+        });
+        this.deviceType = this.product.type;
+    }
+ }
+
+ ngOnChanges() {
+  this.ngOnInit();
   }
   
   
