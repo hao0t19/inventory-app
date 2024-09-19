@@ -36,11 +36,12 @@ export class ProductComponent {
   
 
   deviceTypes = [
-    { name: 'Tablet', icon: 'tablet' },
-    { name: 'Laptop', icon: 'computer' },
-    { name: 'Phone', icon: 'mobile' },
-    { name: 'Monitor', icon: 'display' }
+    { name: 'Tablet', icon: 'fas fa-tablet-alt' },
+    { name: 'Laptop', icon: 'fas fa-laptop' },
+    { name: 'Phone', icon: 'fas fa-mobile-alt' },
+    { name: 'Monitor', icon: 'fas fa-desktop' }
   ];
+  
 
   constructor(private fb: FormBuilder) {
     this.productForm = this.fb.group({

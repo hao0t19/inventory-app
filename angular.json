@@ -34,6 +34,7 @@
             "styles": [
               "src/styles.scss",
               "node_modules/@clr/icons/clr-icons.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "node_modules/@clr/ui/clr-ui.min.css"
             ],
             "scripts": []

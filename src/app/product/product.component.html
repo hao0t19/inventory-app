@@ -14,25 +14,25 @@
       <clr-wizard-button [type]="'finish'" (click)="handleClose()">Finish</clr-wizard-button>
     
     
-    <clr-wizard-page>
-      <ng-template clrPageTitle>Select Device Type</ng-template>
-      <div class="clr-row devices">
-        <div class="clr-col-md-6" *ngFor="let item of deviceTypes">
-          <a 
-            href="javascript:void(0)" 
-            class="card clickable"
-            (click)="selectDevice(item)" 
-            [ngClass]="{'active': item.icon === deviceType}">
-            <div class="card-block">
-              <p class="card-text">
-                {{ item.name }}
-                <clr-icon [attr.shape]="item.icon"></clr-icon>
-              </p>
-            </div>
-          </a>
+      <clr-wizard-page>
+        <ng-template clrPageTitle>Select Device Type</ng-template>
+        <div class="clr-row devices">
+          <div class="clr-col-md-6" *ngFor="let item of deviceTypes">
+            <a 
+              href="javascript:void(0)" 
+              class="card clickable"
+              (click)="selectDevice(item)" 
+              [ngClass]="{'active': item.icon === deviceType}">
+              <div class="card-block">
+                <p class="card-text">
+                  {{ item.name }}
+                  <i class="fa" [ngClass]="item.icon + ' fa-2x'"></i> <!-- Use Font Awesome class here -->
+                </p>
+              </div>
+            </a>
+          </div>
         </div>
-      </div>
-    </clr-wizard-page>
+      </clr-wizard-page>
 
     <clr-wizard-page>
       <ng-template clrPageTitle>Basic Info</ng-template>
