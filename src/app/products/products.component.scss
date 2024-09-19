@@ -55,21 +55,61 @@ clr-dg-row {
 }
 
 /* Pagination styling */
-clr-dg-pagination {
-  background-color: #f8f9fa;
-  padding: 15px;
-  border-top: 1px solid #e9ecef;
-}
+// clr-dg-pagination {
+//   background-color: #f8f9fa;
+//   padding: 15px;
+//   border-top: 1px solid #e9ecef;
+// }
 
-clr-dg-footer {
-  text-align: right;
-  font-size: 14px;
+// clr-dg-footer {
+//   text-align: right;
+//   font-size: 14px;
+// }
+
+// clr-dg-page-size {
+//   font-size: 12px;
+//   margin-right: 15px;
+//   color: #0f62fe;
+// }
+
+/* Custom styles for the pagination component */
+clr-dg-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
 }
 
 clr-dg-page-size {
-  font-size: 12px;
-  margin-right: 15px;
-  color: #0f62fe;
+  margin-right: 1rem;
+}
+
+.pagination-info {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Optional: Style the pagination controls */
+clr-dg-pagination .pagination-list {
+  margin: 0;
+}
+
+clr-dg-pagination .pagination-list .pagination-next,
+clr-dg-pagination .pagination-list .pagination-previous {
+  padding: 0.25rem 0.5rem;
+}
+
+clr-dg-pagination .pagination-list .pagination-next:hover,
+clr-dg-pagination .pagination-list .pagination-previous:hover {
+  background-color: #e9ecef;
+}
+
+clr-dg-pagination .pagination-list .pagination-next:disabled,
+clr-dg-pagination .pagination-list .pagination-previous:disabled {
+  color: #ccc;
+  cursor: not-allowed;
 }
 
 ::ng-deep .datagrid-filter {
