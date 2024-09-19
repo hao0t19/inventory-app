@@ -2,16 +2,16 @@
 <!-- (click)="handleClose()" -->
 
 <form [formGroup]="productForm">
-  <clr-wizard #productWizard [clrWizardOpen]="true" clrWizardSize="lg" >
+  <clr-wizard #productWizard [clrWizardOpen]="true" clrWizardSize="lg" (clrWizardOnCancel)="handleClose()">
     <clr-wizard-title>
       {{ product ? 'Edit Product' : 'Add New Product' }}
     </clr-wizard-title>
     
     
-      <clr-wizard-button [type]="'cancel'" >Cancel</clr-wizard-button>
+      <clr-wizard-button [type]="'cancel'" (click)="handleClose()">Cancel</clr-wizard-button>
       <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
       <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
-      <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
+      <clr-wizard-button [type]="'finish'" (click)="handleClose()">Finish</clr-wizard-button>
     
     
     <clr-wizard-page>
@@ -71,6 +71,13 @@
           <button class="btn btn-primary" (click)="addFeature()">Add Feature</button>
         </div>
       </div>
+
+      <ng-template clrPageButtons>
+        <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+        <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+        <clr-wizard-button [clrWizardButtonDisabled]="isBasicInvalid"
+                [type]="'next'">Next</clr-wizard-button>
+        </ng-template>
     </clr-wizard-page>
     
     
@@ -78,12 +85,13 @@
 
     <clr-wizard-page>
       <ng-template clrPageTitle>Expiration Info</ng-template>
-      <div class="expiration-info">
-        <clr-input-container class="input-container">
-          <label for="expiration-date" class="form-label">Expiration Date</label>
-          <input type="date" clrInput id="expiration-date" formControlName="expirationDate" class="form-input">
-        </clr-input-container>
-      </div>
+      <clr-input-container formGroupName="expiration">
+        <input type="date" clrInput clrDate formControlName="expirationDate" />
+        <clr-control-error>{{ expirationError }}</clr-control-error>
+      </clr-input-container>
+      <ng-template clrPageButtons>
+        <clr-wizard-button [clrWizardButtonDisabled]="isExpirationInvalid" (click)="handleFinish()" [type]="'finish'">Finish</clr-wizard-button>
+    </ng-template>
     </clr-wizard-page>
     
   

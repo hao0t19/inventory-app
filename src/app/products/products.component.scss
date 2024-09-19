@@ -110,5 +110,27 @@ clr-dg-page-size {
   background-color: #60c277;
 }
 
+/* products.component.scss */
+
+.add-product-button {
+  background-color: #007bff; /* Primary color */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  padding: 0.5rem 1rem; /* Padding */
+  font-size: 0.875rem; /* Font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.5); /* Focus ring */
+  }
+}
 
 

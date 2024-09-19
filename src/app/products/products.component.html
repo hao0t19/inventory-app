@@ -1,5 +1,7 @@
 <h1>Products</h1>
-<button class="btn btn-outline btn-sm" >Add Product</button>
+<button class="btn btn-outline btn-sm add-product-button" (click)="addProduct()">Add Product</button>
+<p>&nbsp;&nbsp;</p>
+
 <clr-datagrid>
   <clr-dg-column clrDgField="name">Name</clr-dg-column>
   <clr-dg-column>Expiration Date</clr-dg-column>
@@ -7,7 +9,7 @@
 
   <clr-dg-row *clrDgItems="let product of (products$ | async) ?? []; trackBy: trackById" [clrDgItem]="product">
     <clr-dg-action-overflow>
-      <button class="action-item">Edit</button>
+      <button class="action-item" (click)="onEdit(product)">Edit</button>
       <button class="action-item-delete" (click)="onDelete(product)" >Delete</button>
     </clr-dg-action-overflow>
     <clr-dg-cell>{{ product.name }}</clr-dg-cell>
@@ -37,4 +39,8 @@
  >
  </in-delete-product-modal>
 
- <in-product></in-product>
+ <in-product
+ *ngIf="productOpen"
+ [product]="selectedProduct"
+ (finish)="handleFinish($event)"
+></in-product>

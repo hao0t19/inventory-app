@@ -19,7 +19,16 @@ export class ProductsComponent implements OnInit {
   delete = false;
   productToBeDeleted!: IProduct;
   products$:Observable<IProduct[]>;
+  selectedProduct: IProduct | undefined;
+  productOpen: boolean = false;
+  
 
+
+  addProduct() {
+    this.productOpen = true;
+    this.selectedProduct = undefined;  
+  }
+  
   constructor(private productsService : ProductsService){
     this.products$ = this.productsService.products$;
   }
@@ -28,7 +37,10 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
   }
 
-
+  onEdit(product : IProduct){
+    this.productOpen = true;
+    this.selectedProduct = product;
+  }
 
 
   onDelete(product: IProduct) {
@@ -39,6 +51,19 @@ export class ProductsComponent implements OnInit {
 
   handleCancel() {
     this.delete = false;
+  }
+
+  handleFinish(event : { product: IProduct }){
+    if(event && event.product){
+      if(this.selectedProduct){
+        //Edit Flow
+        this.productsService.editProduct(this.selectedProduct.id,event.product);
+      } else {
+        //Save New
+        this.productsService.addProduct(event.product);
+      }
+    }
+    this.productOpen = false;
   }
 
   confirmDelete() {
