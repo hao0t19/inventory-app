@@ -22,14 +22,14 @@ export class ProductsComponent implements OnInit {
   selectedProduct: IProduct | undefined;
   productOpen: boolean = false;
   
-
-
   addProduct() {
     this.productOpen = true;
     this.selectedProduct = undefined;  
   }
   
+  //dependency injection
   constructor(private productsService : ProductsService){
+    //observable assignment
     this.products$ = this.productsService.products$;
   }
 
@@ -40,13 +40,14 @@ export class ProductsComponent implements OnInit {
   onEdit(product : IProduct){
     this.productOpen = true;
     this.selectedProduct = product;
+    console.log('open edit')
   }
 
 
   onDelete(product: IProduct) {
-    console.log('you click delete')
     this.delete = true;
     this.productToBeDeleted = product;
+    console.log(this.productToBeDeleted )
   }
 
   handleCancel() {

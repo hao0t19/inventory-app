@@ -25,7 +25,9 @@
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@types/lodash": "^4.17.7",
     "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
     "rxjs": "~7.8.0",
+    "source-map-explorer": "^2.5.3",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
   },

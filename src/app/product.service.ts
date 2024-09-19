@@ -98,6 +98,7 @@ export class ProductsService {
       type: 'mobile'
     }];
 
+    //broadcast the current list of products
     products$ = new BehaviorSubject<IProduct[]>(this.products);
 
     removeProduct(product: IProduct) {
@@ -123,6 +124,7 @@ export class ProductsService {
       }
 
       editProduct(id: number, updatedProduct: IProduct) {
+        console.log('you are editing')
         const index = this.products.findIndex(p => p.id === id);
       
         if (index !== -1) {

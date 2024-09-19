@@ -5,16 +5,14 @@ import { IProduct } from '../product.service';
 import { ClarityModule } from '@clr/angular';
 import { CommonModule } from '@angular/common';
 import { ClrWizard } from '@clr/angular';
-import { pick } from 'lodash';
+import pick from 'lodash-es/pick';
 
 function minDateValidation(date: Date): ValidatorFn {
-  return (control: AbstractControl): {[key: string]: any} | null => {
-  const forbidden = new Date(control.value) < date;
-  return forbidden ? {minDateValidation: {value: control.value}}
-         : 
- null;
+  return (control: AbstractControl): { [key: string]: any } | null => {
+    const isDateInvalid = new Date(control.value) < date;
+    return isDateInvalid ? { minDateValidation: { value: control.value } } : null;
   };
-  }
+}
 
 @Component({
   selector: 'in-product',
@@ -25,6 +23,7 @@ function minDateValidation(date: Date): ValidatorFn {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductComponent {
+  //declaration of the form group property
   productForm: FormGroup;
   @Input() product!: IProduct;
   @Output() finish = new EventEmitter;
