@@ -26,10 +26,8 @@ export class ProductsComponent implements OnInit {
     this.productOpen = true;
     this.selectedProduct = undefined;  
   }
-  
-  //dependency injection
+
   constructor(private productsService : ProductsService){
-    //observable assignment
     this.products$ = this.productsService.products$;
   }
 
@@ -57,10 +55,8 @@ export class ProductsComponent implements OnInit {
   handleFinish(event : { product: IProduct }){
     if(event && event.product){
       if(this.selectedProduct){
-        //Edit Flow
         this.productsService.editProduct(this.selectedProduct.id,event.product);
       } else {
-        //Save New
         this.productsService.addProduct(event.product);
       }
     }
@@ -70,8 +66,7 @@ export class ProductsComponent implements OnInit {
 
   confirmDelete() {
     this.handleCancel();
-    // We need to implement this method removeProduct in our ProductsService
-    if (this.productToBeDeleted) { // Check if productToBeDeleted is defined
+    if (this.productToBeDeleted) { 
       this.productsService.removeProduct(this.productToBeDeleted);
     }
   }

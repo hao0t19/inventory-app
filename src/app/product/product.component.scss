@@ -79,14 +79,14 @@ clr-wizard {
 }
 
 ::ng-deep .clr-wizard .modal-title-text{
-  padding: 15px 20px; // Increased padding for more space
-  font-size: 1.25rem; // Larger font size for better readability
-  font-weight: 600; // Slightly bolder text for emphasis
-  color: #333; // Darker color for better contrast
-  background-color: #f8f9fa; // Light background for a cleaner look
-  border-bottom: 2px solid #e0e0e0; // Subtle bottom border for separation
-  border-radius: 4px 4px 0 0; // Rounded corners on the top
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Soft shadow for a lifted effect
+  padding: 15px 20px; 
+  font-size: 1.25rem; 
+  font-weight: 600; 
+  color: #333; 
+  background-color: #f8f9fa; 
+  border-bottom: 2px solid #e0e0e0; 
+  border-radius: 4px 4px 0 0; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 ::ng-deep .clr-wizard .modal-body{
@@ -101,31 +101,31 @@ clr-wizard {
   margin: 0;
   max-width: 100%;
   display: block;
-  padding: 0.75rem 1.5rem; // Added padding for a more comfortable click area
-  font-size: 1rem; // Set font size for better readability
-  font-weight: 500; // Slightly bolder text
-  text-align: center; // Center align text
-  border: 1px solid transparent; // Add border for consistency, but make it invisible initially
-  border-radius: 4px; // Rounded corners for a modern look
-  background-color: #007bff; // Primary background color
-  color: #fff; // Text color
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; // Smooth transition effects
+  padding: 0.75rem 1.5rem; 
+  font-size: 1rem; 
+  font-weight: 500; 
+  text-align: center; 
+  border: 1px solid transparent; 
+  border-radius: 4px; 
+  background-color: #007bff; 
+  color: #fff; 
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; 
 
   &:hover {
-    background-color: #0056b3; // Darker background on hover
-    color: #fff; // Ensure text color remains white
-    border-color: #004085; // Add border color on hover
+    background-color: #0056b3; 
+    color: #fff; 
+    border-color: #004085; 
   }
 
   &:active {
-    background-color: #004085; // Even darker background on click
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); // Slight shadow for pressed effect
+    background-color: #004085; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
   }
 
   &:disabled {
-    background-color: #c0c0c0; // Disabled state background color
-    color: #6c757d; // Disabled state text color
-    cursor: not-allowed; // Change cursor to indicate disabled state
+    background-color: #c0c0c0; 
+    color: #6c757d; 
+    cursor: not-allowed; 
   }
 }
 
@@ -133,31 +133,31 @@ clr-wizard {
   margin: 0;
   max-width: 100%;
   display: block;
-  padding: 0.75rem 1.5rem; // Added padding for a more comfortable click area
-  font-size: 1rem; // Set font size for better readability
-  font-weight: 500; // Slightly bolder text
-  text-align: center; // Center align text
-  border: 1px solid transparent; // Add border for consistency, but make it invisible initially
-  border-radius: 4px; // Rounded corners for a modern look
-  background-color: #ce2424; // Primary background color
-  color: #fff; // Text color
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; // Smooth transition effects
+  padding: 0.75rem 1.5rem; 
+  font-size: 1rem; 
+  font-weight: 500; 
+  text-align: center; 
+  border: 1px solid transparent; 
+  border-radius: 4px; 
+  background-color: #ce2424; 
+  color: #fff; 
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; 
 
   &:hover {
-    background-color: #cf0303; // Darker background on hover
-    color: #fff; // Ensure text color remains white
-    border-color: #004085; // Add border color on hover
+    background-color: #cf0303; 
+    color: #fff; 
+    border-color: #004085; 
   }
 
   &:active {
-    background-color: #ffffff; // Even darker background on click
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); // Slight shadow for pressed effect
+    background-color: #ffffff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
   }
 
   &:disabled {
-    background-color: #c0c0c0; // Disabled state background color
-    color: #6c757d; // Disabled state text color
-    cursor: not-allowed; // Change cursor to indicate disabled state
+    background-color: #c0c0c0; 
+    color: #6c757d; 
+    cursor: not-allowed; 
   }
 }
 
@@ -182,7 +182,7 @@ clr-wizard {
 }
 
 .required {
-  color: #d9534f; /* Red color for the asterisk */
+  color: #d9534f; 
 }
 
 .form-input {
@@ -285,10 +285,10 @@ clr-wizard {
 .card-text {
   display: flex;
   align-items: center;
-  font-size: 16px; // Adjust font size if necessary
+  font-size: 16px; 
 }
 
 .fa {
-  margin-left: 8px; // Space between text and icon
+  margin-left: 8px; 
 }
 

@@ -2,39 +2,35 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* General page styles */
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
-  background-color: #f8f9fa; /* Light background */
+  background-color: #f8f9fa; 
 }
 
-/* Header styling */
 h1 {
-  color: #197ee2; // A dark shade of blue-gray for a sophisticated look
-  font-size: 1.5rem; // Responsive font size that scales well
-  font-weight: 700; // Bold text to make the heading prominent
-  margin: 0 0 1rem 0; // Remove top margin and add bottom margin for spacing
-  padding: 0; // Remove default padding
-  line-height: 1.2; // Improve readability with appropriate line height
-  text-align: left; // Align text to the left for a more traditional look
-  text-transform: capitalize; // Capitalize the first letter of each word
-  border-bottom: 2px solid #3498db; // Add a bottom border with color for emphasis
-  padding-bottom: 0.5rem; // Add padding to prevent overlap with the border
+  color: #197ee2; 
+  font-size: 1.5rem;
+  font-weight: 700; 
+  margin: 0 0 1rem 0; 
+  padding: 0; 
+  line-height: 1.2;
+  text-align: left; 
+  text-transform: capitalize; 
+  border-bottom: 2px solid #3498db; 
+  padding-bottom: 0.5rem; 
 }
 
-
-/* Styling the Clarity datagrid */
 clr-datagrid {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-  border-radius: 8px; /* Smooth corners */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px; 
   background-color: white;
   overflow: hidden;
 }
 
 clr-dg-column {
-  background-color: #00539c; /* Dark blue background for header */
-  color: white; /* White text in headers */
+  background-color: #00539c; 
+  color: white;
   font-weight: bold;
   padding: 15px 10px;
 }
@@ -47,32 +43,13 @@ clr-dg-cell {
 
 clr-dg-row {
   &:nth-child(odd) {
-    background-color: #f1f1f1; /* Alternating row colors */
+    background-color: #f1f1f1; 
   }
   &:nth-child(even) {
     background-color: white;
   }
 }
 
-/* Pagination styling */
-// clr-dg-pagination {
-//   background-color: #f8f9fa;
-//   padding: 15px;
-//   border-top: 1px solid #e9ecef;
-// }
-
-// clr-dg-footer {
-//   text-align: right;
-//   font-size: 14px;
-// }
-
-// clr-dg-page-size {
-//   font-size: 12px;
-//   margin-right: 15px;
-//   color: #0f62fe;
-// }
-
-/* Custom styles for the pagination component */
 clr-dg-pagination {
   display: flex;
   justify-content: space-between;
@@ -91,7 +68,6 @@ clr-dg-page-size {
   color: #555;
 }
 
-/* Optional: Style the pagination controls */
 clr-dg-pagination .pagination-list {
   margin: 0;
 }
@@ -137,26 +113,24 @@ clr-dg-pagination .pagination-list .pagination-previous:disabled {
   background-color: #60c277;
 }
 
-/* products.component.scss */
-
 .add-product-button {
-  background-color: #007bff; /* Primary color */
-  color: #fff; /* Text color */
+  background-color: #007bff; 
+  color: #fff;
   border: none;
-  border-radius: 4px; /* Rounded corners */
-  padding: 0.5rem 1rem; /* Padding */
-  font-size: 0.875rem; /* Font size */
+  border-radius: 4px; 
+  padding: 0.5rem 1rem; 
+  font-size: 0.875rem; 
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    background-color: #0056b3; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.5); /* Focus ring */
+    box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.5); 
   }
 }
 

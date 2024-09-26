@@ -98,7 +98,7 @@ export class ProductsService {
       type: 'mobile'
     }];
 
-    //broadcast the current list of products
+  
     products$ = new BehaviorSubject<IProduct[]>(this.products);
 
     removeProduct(product: IProduct) {
@@ -112,13 +112,11 @@ export class ProductsService {
 
       
       addProduct(product: IProduct) {
-        // Generate a new ID only if the product doesn't have one
         const newProduct: IProduct = {
           ...product,
           id: product.id || generateId(),
         };
       
-        // Add the new product to the beginning of the list
         this.products = [newProduct, ...this.products];
         this.products$.next(this.products);
       }
@@ -128,14 +126,12 @@ export class ProductsService {
         const index = this.products.findIndex(p => p.id === id);
       
         if (index !== -1) {
-          // Update the product at the specified index
           this.products[index] = {
             ...this.products[index],
             ...updatedProduct,
-            id, // Ensure the ID remains the same
+            id,
           };
       
-          // Emit the updated product list
           this.products$.next(this.products);
         } else {
           console.error(`Product with id ${id} not found.`);

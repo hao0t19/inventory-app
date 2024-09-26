@@ -1,19 +1,19 @@
 h1 {
-  font-family: 'Roboto', sans-serif; /* A modern sans-serif font */
-  font-size: 2.5rem; /* Larger font size for emphasis */
-  font-weight: 700; /* Bold weight for importance */
-  color: #333; /* Dark gray for readability */
-  text-transform: uppercase; /* Uppercase for a professional touch */
-  letter-spacing: 1.5px; /* Slight letter spacing for clarity */
-  margin: 0 0 20px 0; /* Margin to separate from other elements */
-  padding: 10px 0; /* Padding to give it some space */
-  border-bottom: 2px solid #007BFF; /* A subtle border to add depth */
-  text-align: center; /* Center align for a balanced look */
-  background: linear-gradient(to right, #000000, #00BFFF); /* Gradient background */
-  -webkit-background-clip: text; /* Clip background to text */
-  -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  font-family: 'Roboto', sans-serif; 
+  font-size: 2.5rem; 
+  font-weight: 700; 
+  color: #333; 
+  text-transform: uppercase; 
+  letter-spacing: 1.5px; 
+  margin: 0 0 20px 0; 
+  padding: 10px 0;
+  border-bottom: 2px solid #007BFF; 
+  text-align: center; 
+  background: linear-gradient(to right, #000000, #00BFFF); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease; 
   padding-left: 10px;
 }
 

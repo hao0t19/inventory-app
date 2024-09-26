@@ -1,68 +1,60 @@
-/* delete-product-modal.component.scss */
 
-/* Styles for the entire modal */
 clr-modal {
-  max-width: 500px; // Limit the width of the modal
-  border-radius: 8px; // Rounded corners for a modern look
+  max-width: 500px; 
+  border-radius: 8px; 
 }
 
-/* Styles for the modal title */
 .modal-title {
-  font-size: 1.5rem; // Larger font size for emphasis
-  color: #333; // Darker color for better readability
+  font-size: 1.5rem; 
+  color: #333; 
   font-weight: bold;
 }
 
-/* Styles for the modal body */
 .modal-body {
-  padding: 20px; // Add padding inside the modal body
-  font-size: 1rem; // Increase font size for readability
-  color: #555; // Slightly lighter color for the text
+  padding: 20px; 
+  font-size: 1rem; 
+  color: #555; 
 }
 
-/* Styles for alert in the modal body */
 clr-alert {
-  margin-bottom: 20px; // Space between alert and other content
-  padding: 10px; // Padding inside the alert
+  margin-bottom: 20px; 
+  padding: 10px; 
 }
 
-/* Styles for alert text */
 .alert-text {
-  font-size: 1rem; // Font size for alert text
-  color: #d9534f; // Red color for the alert
+  font-size: 1rem; 
+  color: #d9534f; 
 }
 
-/* Styles for the modal footer */
 .modal-footer {
-  padding: 10px 20px; // Padding for the footer
-  text-align: right; // Align buttons to the right
-  background-color: #f7f7f7; // Light background color for the footer
-  border-top: 1px solid #ddd; // Border at the top of the footer
+  padding: 10px 20px; 
+  text-align: right; 
+  background-color: #f7f7f7; 
+  border-top: 1px solid #ddd; 
 }
 
-/* Styles for the action buttons */
 .btn {
-  font-size: 1rem; // Font size for buttons
-  padding: 10px 20px; // Padding inside buttons
-  border-radius: 4px; // Rounded corners for buttons
+  font-size: 1rem; 
+  padding: 10px 20px; 
+  border-radius: 4px; 
 }
 
 .btn-outline {
-  border-color: #007bff; // Outline color
-  color: #007bff; // Text color
+  border-color: #007bff; 
+  color: #007bff; 
 }
 
 .btn-outline:hover {
-  background-color: #e7f0ff; // Background color on hover
+  background-color: #e7f0ff; 
 }
 
 .btn-danger {
-  background-color: #d9534f; // Red background for danger button
-  color: white; // White text for better contrast
+  background-color: #d9534f; 
+  color: white; 
 }
 
 .btn-danger:hover {
-  background-color: #c9302c; // Darker red on hover
+  background-color: #c9302c; 
 }
 
 ::ng-deep .modal-body-wrapper{

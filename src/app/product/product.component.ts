@@ -7,10 +7,11 @@ import { CommonModule } from '@angular/common';
 import { ClrWizard } from '@clr/angular';
 import pick from 'lodash-es/pick';
 
-function minDateValidation(date: Date): ValidatorFn {
+
+function minDateValidation(date: Date): ValidatorFn { 
   return (control: AbstractControl): { [key: string]: any } | null => {
-    const isDateInvalid = new Date(control.value) < date;
-    return isDateInvalid ? { minDateValidation: { value: control.value } } : null;
+    const isDateInvalid = new Date(control.value) < date;  
+    return isDateInvalid ? { minDateValidation: { value: control.value } } : null; 
   };
 }
 
@@ -23,7 +24,6 @@ function minDateValidation(date: Date): ValidatorFn {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductComponent {
-  //declaration of the form group property
   productForm: FormGroup;
   @Input() product!: IProduct;
   @Output() finish = new EventEmitter;
@@ -38,7 +38,7 @@ export class ProductComponent {
     { name: 'Monitor', icon: 'fas fa-desktop' }
   ];
   
-  constructor(private fb: FormBuilder) { //inject formbuilder
+  constructor(private fb: FormBuilder) { 
     this.productForm = this.fb.group({
       basic: this.fb.group({
         name: ['' , Validators.required],
@@ -93,20 +93,19 @@ export class ProductComponent {
   }
 
   close() {
-    // Reset the form
+    
     if (this.productForm) {
       this.productForm.reset();
     }
     
-    // Reset the device type
+    
     this.deviceType = 'tablet';
     
-    // Safely navigate to the first page of the wizard
     if (this.productWizard?.pageCollection?.pages.length) {
       this.productWizard.goTo(this.productWizard.pageCollection.pages.first.id);
     }
   
-    // Reset the wizard
+    
     this.productWizard?.reset();
   }
 
@@ -123,9 +122,9 @@ export class ProductComponent {
   }
 
   ngOnInit() {
-    if (this.product) { //check condition 
+    if (this.product) { 
       console.log('in if ')
-        this.productForm.setValue({ //set the values of the form controls
+        this.productForm.setValue({ 
             basic: {
                 ...pick(this.product, ['name', 'description', 'active']),
                 features: this.product.features || [''],
@@ -144,5 +143,5 @@ export class ProductComponent {
   this.ngOnInit();
   }
   
-  
+
 }
